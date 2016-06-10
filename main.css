@@ -1,0 +1,60 @@
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Slabo 27px', serif;
+}
+
+p {
+   margin: 0;
+   padding: 0;
+   display: inline;   
+}
+
+.testa {
+   position: absolute;
+   width: 100%;
+   height: 100px;
+   text-align: center;
+} 
+
+.testa .top-nav {
+	position: absolute;
+	width: 1000px;
+	height: 100%;
+	left: 50%;	
+	margin-left: -500px;
+
+}
+
+.testa .top-nav .page-logo {
+	fill: #FFFFFF;
+	float: left;
+	diplay: inline;
+	margin-top: 13px;
+}
+
+.testa .top-nav .navig {
+	list-style: none;
+}
+
+.testa .top-nav .navig li a {
+	text-decoration: none;
+	display: inline-block;
+	float: right;
+	margin-left: 6%;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+
+.testa .top-nav .hamburger-nav {
+	display: none;
+}
+
+
+.article-header-main {
+	background-image: url("ristorante.jpg");
+	width: 100%;
+	height: 100vh;
+	background-position: 60%;
+	overflow: hidden;
+}
