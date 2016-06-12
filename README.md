@@ -1,4 +1,4 @@
 # Restaurant-Booking
-HTML, CSS, jQuery, PHP, MySQL
+HTML, CSS, js
 
 - under construction...
