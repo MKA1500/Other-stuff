@@ -1,25 +1,31 @@
-body {
-   margin: 0;
-   padding: 0;
-   font-family: 'Slabo 27px', serif;
+* {
+	padding: 0;
+	margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;	
 }
 
-p {
-   margin: 0;
-   padding: 0;
-   display: inline;   
+body {
+   font-family: 'Slabo 27px', serif;
+   	font-size: 62.5%; /* 1.4em = 14pt */
+	color: #37474F;
+    font-size: 1.1em;
 }
+
 
 .testa {
-   position: absolute;
+   position: fixed;
    width: 100%;
-   height: 100px;
+   height: 115px;
    text-align: center;
+   background-color: #000000;
+   opacity: 0.6;
 } 
 
 .testa .top-nav {
-	width: 100%;
-	max-width: 1000px;
+	width: 90%;
+	max-width: 1200px;
 	height: 100%;
     margin: 0 auto;
 
@@ -28,25 +34,25 @@ p {
 .testa .top-nav .page-logo {
 	fill: #FFFFFF;
 	float: left;
-	diplay: inline;
-	margin-left: 3%;
+	margin-top: -8px;
+	margin-left: 20px;
 }
 
 .testa .top-nav .navig {
 	list-style: none;
+	margin-top: 60px;
 }
 
 .testa .top-nav .navig li a {
 	text-decoration: none;
 	display: inline-block;
 	float: right;
-	margin-left: 5%;
 	color: #FFFFFF;
-	font-size: 18px;
+	font-size: 1.3em;
 }
 
 .testa .top-nav .navig li a:first-child {
-	margin-right: 3%;
+	margin-left: 3%;
 } 
 
 .testa .top-nav .hamburger-nav {
@@ -54,7 +60,7 @@ p {
 }
 
 
-.article {
+.article-header {
 	background-image: url("ristorante.jpg");
 	width: 100%;
 	height: 100vh;
@@ -62,42 +68,39 @@ p {
 	overflow: hidden;
 }
 
-#central {
-	max-width: 1000px;
-	margin: 0 auto;
+
+.articles {
+	width: 90%;
+	max-width: 1200px;
+	height: auto;
+    margin: 0 auto;	
+    clear: both;	
 }
 
-#calendar-container {
-    padding: 10px;
-    width: 210px;
-    height: 240px;
-    text-align: center;
-    border: 1px solid #eee;
-    border-radius: 10px;
-    font-size: 16px;
-	color: #FFFFFF;
-    background-color: #000000;
-	opacity: 0.5;
-	margin-top: 130px;
-	margin-left: 3%;
+.articles article.art {
+	width: 33%;
+	height: auto;
+	padding: 2%;
+	display: inline-block;
 }
 
-#calendar-container {
-    padding: 0;
-    margin-bottom: 10px;
+.articles .art h3 {
+	text-transform: uppercase;
+	padding: 1em 0em 1em 0em; 	
 }
 
-#calendar-month-year {
-    margin: 5px;
+.articles .art p {
+	padding: 1em 0em 1em 0em; 	
 }
 
-#calendar-dates table tr td{
-    padding: 5px;
+.articles .art img.artimage {
+	width: 100%;
+	height: auto;
 }
 
-@media (max-width: 1025px) {
-	
-.testa .top-nav .navig li a {	
-	margin-left: 3%;
-}
-}
+
+
+
+
+
+
