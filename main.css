@@ -16,15 +16,15 @@ body {
 .testa {
    position: absolute;
    width: 100%;
-   height: 115px;
+   height: 220px;
    text-align: center;
    background-color: #000000;
    opacity: 0.6;
 } 
 
 #pizza {
-	position: absolute;
-    margin: 60px;
+	position: fixed;
+    margin: 10px 0px 0px 50px;
 }
 
 .top-nav {
@@ -44,7 +44,7 @@ body {
 
 .top-nav .navig {
 	list-style: none;
-	margin-top: 72px;
+	margin-top: 167px;
 }
 
 .top-nav .navig li a {
@@ -52,8 +52,10 @@ body {
 	display: inline-block;
 	float: right;
 	color: #FFFFFF;
-	font-size: 1em;
-	padding: 11px;
+	font-size: 1.1em;
+	padding: 17px 14px 13px 14px;
+	font-style: italic;
+	opacity: 0.9;
 }
 
 .top-nav .navig li a:hover {
@@ -75,13 +77,45 @@ body {
 	overflow: hidden;
 }
 
+#welcome {
+	position: absolute;
+	z-index: 15;
+	font-style: italic;
+	color: #FFFFFF;
+    margin: 38px 0px 0px 270px;
+    opacity: 0.8;
+	
+	
+}
 
-.articles {
-	width: 90%;
-	max-width: 1200px;
+#welcome h1 {
+    font-size: 5em;	
+}
+
+#welcome h3 {
+	font-size: 0.9em;
+	margin-top: -10px;
+}
+
+.articles-wrapper {
 	height: auto;
     margin: 0 auto;	
-    clear: both;	
+	padding-left: 190px;
+	width: 90%;
+	max-width: 1200px;	
+}
+
+
+.articles {
+    clear: both;
+    margin: 0px -50px 0px 50px;
+    opacity: 0;	
+	transition: all 400ms ease-in;
+}
+
+.js-articles-animation {
+	opacity: 1;
+    margin: 0px 0px 0px 0px;
 }
 
 .articles article.art {
