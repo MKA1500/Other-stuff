@@ -4,7 +4,11 @@ var win = $(window);
 win.on('scroll', function(){
 	var top = win.scrollTop();
 	pizza.css('transform', 'rotate(' + top / 4 + 'deg)');
-});
+}); 
+
+// smooth scrolling:
+
+$('.navig').localScroll();
 
 var navig = $('.navig');
 var testa = $('.testa');
