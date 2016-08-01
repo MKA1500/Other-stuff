@@ -16,6 +16,12 @@ if (empty($_POST) === false) {
             $errors[] = 'That\'s not valid email adress';			
 		}		
 	}
+	
+	if (empty($errors) === true) {
+		mail('maciejkabsch@gmail.com', 'Contact Form', $message, 'From: '. $email);
+		header('Location: index.php?sent');
+		exit();
+	}
 }
 ?>
 
@@ -31,12 +37,16 @@ if (empty($_POST) === false) {
 
 <body>
     <?php 
+	if(isset($_GET['sent']) === true) {
+		echo '<div class="thanks">Thanks for contacting us!</div>';
+	}
+	
     if (empty($errors) === false) {
-		echo '<ul>';
+		echo '<div class="thanks"><ul>';
 		foreach($errors as $error) {
 			echo '<li>', $error, '</li>';
 		}
-		echo '</ul>';
+		echo '</ul></div>';
 	}
 	
 	# TO BE CONTINUED...
@@ -137,18 +147,24 @@ if (empty($_POST) === false) {
 	<section class="articles" id="a-three">
 	
     <div class="form-wrap shadow">	
-      <form action="" method="post"> 
+      <form id="contact-form" action="" method="post"> 
 		<div class="form-block">
 		  <div class="label">Name:</div>
-		  <input type="text" name="name" id="name">
+		  <input type="text" name="name" id="name" <?php 
+		  if (isset($_POST['name']) === true) 
+		  { echo 'value="', strip_tags($_POST['name']), '"';}	  ?>>
 		</div>
 		<div class="form-block">
 		  <div class="label">E-mail:</div>
-		  <input type="email" name="email" id="email">
+		  <input type="email" name="email" id="email" <?php 
+		  if (isset($_POST['email']) === true) 
+		  { echo 'value="', strip_tags($_POST['email']), '"';}	  ?>>
 		</div>
 		<div class="textarea-block">
 		  <div class="label">Message:</div>
-		  <textarea name="message" id="message"></textarea>
+		  <textarea name="message" id="message"><?php 
+		     if (isset($_POST['message']) === true) 
+		     { echo  strip_tags($_POST['message']);} ?></textarea>
 		</div class="form-block">
 		<div class="submit-block">
 		  <input type="submit" value="Submit" id="sumbmit">
