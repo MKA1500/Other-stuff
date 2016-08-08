@@ -38,7 +38,10 @@ if (empty($_POST) === false) {
 <body>
     <?php 
 	if(isset($_GET['sent']) === true) {
-		echo '<div class="thanks">Thanks for contacting us!</div>';
+		echo '<div class="thanks">
+		<p id="thank-for">Thanks for contacting us!</p>
+		<p id="close">Close</p>
+		</div>';
 	}
 	
     if (empty($errors) === false) {
